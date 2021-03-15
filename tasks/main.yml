@@ -1,0 +1,19 @@
+#- name: Curl HELM
+#  shell: curl -LO https://git.io/get_helm.sh
+
+#- name: Chmod file
+
+#- name: Downloading helm get_helm.sh
+#  get_url:
+#    url: https://git.io/get_helm.sh
+#    dest: ~/get_helm.sh
+#    mode: '0700'
+
+#- name: Helm Client Installation
+#  shell: ./get_helm.sh -v v2.16.1
+#  args:
+#    chdir: ~/
+
+- name: Installing nvm
+  become: true
+  shell: "curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash"
